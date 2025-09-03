@@ -48,15 +48,7 @@ This stage involved creating new features and preparing the data for modeling.
 
 ---
 
-### 4. Addressing Class Imbalance (Planned)
-
-The distribution of the **'Survived'** column was checked and found to be **imbalanced** (more non-survivors than survivors).  
-
-While not fully implemented in the executed cells, the plan included using techniques like **SMOTE** to balance the dataset for potentially improved model performance, especially for predicting the minority class.  
-
----
-
-### 5. Model Development and Evaluation
+### 4. Model Development and Evaluation
 
 This stage involved training and evaluating multiple classification models.  
 
@@ -68,7 +60,7 @@ This stage involved training and evaluating multiple classification models.
 
 ---
 
-### 6. Prediction and Submission
+### 5. Prediction and Submission
 
 The final stage involved making predictions on the test data and generating the submission file.
 
