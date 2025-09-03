@@ -1,16 +1,16 @@
-# Titanic Survival Prediction Project
+# Titanic Survival Prediction Project  
 
-This project aims to build a **classification model** that predicts the survival of passengers on the Titanic. The process followed a clear **machine learning workflow**, which included **data preparation, exploratory data analysis, feature engineering, model development, and performance evaluation**.
-
----
-
-## Project Workflow
-
-The steps taken to process the data and develop the predictive models are outlined below:
+This project aims to build a **classification model** that predicts the survival of passengers on the Titanic. The process followed a clear **machine learning workflow**, which included **data preparation, exploratory data analysis, feature engineering, model development, and performance evaluation**.  
 
 ---
 
-### 1. Data Loading and Initial Assessment
+## Project Workflow  
+
+The steps taken to process the data and develop the predictive models are outlined below:  
+
+---
+
+### 1. Data Loading and Initial Assessment  
 
 The initial phase focused on loading the datasets and performing a preliminary assessment.  
 
@@ -21,7 +21,7 @@ The initial phase focused on loading the datasets and performing a preliminary a
 
 ---
 
-### 2. Exploratory Data Analysis (EDA)
+### 2. Exploratory Data Analysis (EDA)  
 
 This stage focused on gaining insights into the data through visualization.  
 
@@ -33,7 +33,7 @@ This stage focused on gaining insights into the data through visualization.
 
 ---
 
-### 3. Feature Engineering and Preprocessing
+### 3. Feature Engineering and Preprocessing  
 
 This stage involved creating new features and preparing the data for modeling.  
 
@@ -48,22 +48,30 @@ This stage involved creating new features and preparing the data for modeling.
 
 ---
 
-### 4. Model Development and Evaluation
+### 4. Model Development, Evaluation, and Metrics  
 
-This stage involved training and evaluating multiple classification models.  
+The key metrics to focus on are **Precision, Recall, and F1 Score**.  
 
-- **Model Selection**: Several models were chosen for their suitability for classification tasks, including **Logistic Regression, Random Forest, Gradient Boosting, SVC, KNeighbors, and Decision Tree**.  
-- **Data Splitting**: The training data was split into training and validation sets to evaluate model performance during development.  
-- **Hyperparameter Tuning**: `GridSearchCV` was used with cross-validation on the training split to find the optimal hyperparameters for each model based on various scoring metrics.  
-- **Model Evaluation**: The tuned models were evaluated on the validation set using metrics such as **Accuracy, Precision, Recall, and F1-Score**. Confusion matrices were also generated to visualize the model performance.  
-- **Cross-Validation**: 5-fold cross-validation was performed on the full training dataset using the best estimators to get a more robust estimate of the models' performance and assess their generalization ability.  
+- **Precision** measures the accuracy of positive predictions (survivors predicted correctly).  
+- **Recall** measures the ability of the model to find all actual survivors.  
+- **F1 Score** is the harmonic mean of Precision and Recall, providing a balanced measure.  
+- **Accuracy** provides an overall correctness metric but may not reflect class-specific performance fully.  
+
+According to the evaluation metrics and cross-validation results, the tuned **Random Forest model** performed best with the following scores on the validation set:  
+
+- Accuracy: 0.8380  
+- Precision: 0.8333  
+- Recall: 0.7246  
+- F1 Score: 0.7752  
+- Cross-Validation Mean Accuracy: 0.8260  
+
+This demonstrates the Random Forest model’s strong predictive capability with balanced performance between identifying true survivors and minimizing false predictions.  
 
 ---
 
-### 5. Prediction and Submission
+### 5. Prediction and Submission  
 
-The final stage involved making predictions on the test data and generating the submission file.
+The final stage involved making predictions on the test data and generating the submission file.  
 
-- **Best Model Selection**: Based on the evaluation and cross-validation results, the tuned **Random Forest model** was identified as a strong performer.  
 - **Prediction on Test Set**: The tuned Random Forest model was used to predict the survival status of the passengers in the test dataset.  
 - **Submission File Generation**: A `submission.csv` file was created containing the **PassengerId** from the original test data and the predicted **Survived** values.  
