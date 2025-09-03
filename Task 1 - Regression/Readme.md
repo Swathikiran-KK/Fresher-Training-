@@ -75,7 +75,18 @@ This phase involved building and assessing the performance of various regression
 | Support Vector Regressor    | 6.41e+10  | 253214.38 | 203902.24 | 0.010     | -0.008       |  
 
 ---
+### Evaluation Metrics to Focus On  
 
+For this regression problem, the key metrics to focus on are:  
+
+- **Root Mean Squared Error (RMSE)**: Measures the average magnitude of the errors, providing higher weight to large errors. Lower RMSE indicates better model performance.  
+- **Mean Absolute Error (MAE)**: Measures the average absolute difference between predicted and actual values. It is more robust to outliers than RMSE.  
+- **R-squared (R2) Score**: Represents the proportion of variance explained by the model. Higher values closer to 1 indicate better performance.  
+- **Cross-Validation R2 Mean**: Provides an estimate of model generalization performance over different subsets of the data.  
+
+These metrics together give a comprehensive picture of the model's accuracy and reliability. 
+
+---
 ### Conclusion  
 
 Based on the evaluation, the **Gradient Boosting Regressor** showed the best performance in predicting used car prices in this dataset. It exhibited the lowest MSE, RMSE, and MAE, along with the highest R2 score.  
